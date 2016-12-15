@@ -1,0 +1,122 @@
+﻿@model ShipCruise.Models.PurchaseViewModel
+
+@{
+    ViewBag.Title = "Purchase";
+}
+
+<h2>Confirmation</h2>
+
+
+    <h4>Ticket</h4>
+    <hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.seat)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.seat)
+                @Html.HiddenFor(model => model.seat)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.shipname)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.shipname)
+                @Html.HiddenFor(model => model.shipname)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.startDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.startDate)
+                @Html.HiddenFor(model => model.startDate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.endDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.endDate)
+                @Html.HiddenFor(model => model.endDate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.startLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.startLocation)
+                @Html.HiddenFor(model => model.startLocation)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.price)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.price)
+                @Html.HiddenFor(model => model.price)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.destination)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.destination)
+                @Html.HiddenFor(model => model.destination)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.shipType)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.shipType)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.seatnumber)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.seatnumber)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.email)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.email)
+                @Html.HiddenFor(model => model.email)
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirm" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+

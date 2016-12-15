@@ -1,0 +1,82 @@
+﻿@model ShipCruise.Models.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.seatnumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seatnumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shipName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shipName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

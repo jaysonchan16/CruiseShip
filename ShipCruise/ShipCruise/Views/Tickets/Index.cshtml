@@ -1,0 +1,84 @@
+﻿@model ShipCruise.Models.TicketViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cart</h2>
+
+
+<table class="table">
+    @foreach (var items in Model.mytickets)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => items.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.seatnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.shipType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.shipName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.startLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.price)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete2", new { id = items.id })
+            </td>
+        </tr>
+    }
+   
+</table>
+<h2>Schedules</h2>
+<table class="table">
+    @foreach (var items in Model.myschedules)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => items.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.shipname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.startDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.endDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.startLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.seat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.price)
+            </td>
+            <td>
+
+                @Html.ActionLink("buy", "Delete", new { id = items.ID })
+            </td>
+        </tr>
+    }
+
+</table>
